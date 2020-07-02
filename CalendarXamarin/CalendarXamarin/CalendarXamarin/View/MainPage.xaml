@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CalendarXamarin"
+             xmlns:calendar="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             x:Class="CalendarXamarin.MainPage">
+    <ContentPage.BindingContext>
+        <local:CalendarViewModel/>
+    </ContentPage.BindingContext>
+    <Grid>
+        <calendar:SfCalendar x:Name="calendar" SelectionMode="MultiRangeSelection" SelectedRange="{Binding SelectedRanges}">
+            <calendar:SfCalendar.MonthViewSettings>
+                <calendar:MonthViewSettings 
+                        DateTextAlignment="Center" 
+                        SelectionShape="Circle"
+                        DateSelectionColor="#6613ee"
+                        >
+                </calendar:MonthViewSettings>
+            </calendar:SfCalendar.MonthViewSettings>
+        </calendar:SfCalendar>
+    </Grid>
+</ContentPage>
